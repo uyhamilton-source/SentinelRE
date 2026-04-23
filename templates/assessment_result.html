@@ -1,0 +1,6 @@
+
+{% extends 'base.html' %}{% block content %}
+<h2>Assessment Result</h2><div class="grid-4"><div class="card metric"><div class="label">Overall Risk</div><div class="value">{{ assessment.overall_level }}</div></div><div class="card metric"><div class="label">Average Score</div><div class="value">{{ '%.2f'|format(assessment.overall_score) }}</div></div><div class="card metric"><div class="label">Exposure / Transaction</div><div class="value">${{ '{:,.0f}'.format(assessment.exposure or 0) }}</div></div><div class="card metric"><div class="label">Downtime Loss</div><div class="value">${{ '{:,.0f}'.format(assessment.downtime_loss or 0) }}</div></div></div>
+<div class="card"><h3>Findings</h3><div class="table-wrap"><table><tr><th>Category</th><th>Response</th><th>Risk Level</th><th>Framework Alignment</th></tr>{% for row in findings %}<tr><td>{{ row.category }}</td><td>{{ row.response }}</td><td>{{ row.risk_level }}</td><td>{{ row.framework_alignment }}</td></tr>{% endfor %}</table></div></div>
+<div class="card"><h3>30–60 Day Action Plan</h3><ol>{% for item in actions %}<li>{{ item }}</li>{% endfor %}</ol><a class="btn" href="{{ url_for('assessment_pdf', assessment_id=assessment.id) }}">Download Branded PDF</a></div>
+{% endblock %}

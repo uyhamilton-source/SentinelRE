@@ -1,0 +1,17 @@
+
+:root{--navy:#0B122B;--gold:#C99A2E;--border:#EBE8F2;}
+body{font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#fff 0%,#f8f7fb 100%);color:#1a1a1a;margin:0}
+.navbar{background:linear-gradient(135deg,var(--navy) 0%,#171f45 100%);color:#fff;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:14px}.brand img{width:52px;height:52px;object-fit:contain;border-radius:10px}
+.brand-title{font-size:1.4rem;font-weight:700}.brand-sub{color:#ebeaf5;font-size:.92rem}.nav-links a{color:white;text-decoration:none;margin-left:16px}
+.container{width:min(1180px,92%);margin:24px auto 40px auto}.card{background:white;border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:0 8px 22px rgba(11,18,43,0.05);margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.metric{text-align:center}.metric .label{color:#666;font-size:.9rem}.metric .value{font-size:1.5rem;font-weight:700;color:var(--navy);margin-top:6px}
+h1,h2,h3{color:var(--navy)} label{display:block;font-weight:700;margin-bottom:6px;color:var(--navy)}
+input,select,textarea{width:100%;padding:12px;border:1px solid #d9dceb;border-radius:10px;margin-bottom:14px;font-size:1rem;box-sizing:border-box}
+button,.btn{background:linear-gradient(135deg,var(--gold),#e6c166);color:#111;border:none;border-radius:999px;padding:12px 18px;text-decoration:none;font-weight:700;cursor:pointer;display:inline-block}
+.btn-secondary{background:white;border:1px solid var(--border);color:var(--navy)} .flash{padding:12px 14px;border-radius:10px;margin-bottom:15px}
+.flash-success{background:#ecfdf3;color:#166534}.flash-danger{background:#fef2f2;color:#991b1b}.flash-warning{background:#fffbeb;color:#92400e}.flash-info{background:#eff6ff;color:#1d4ed8}
+.table-wrap{overflow:auto} table{width:100%;border-collapse:collapse} th,td{padding:10px;border-bottom:1px solid #ece8f4;text-align:left} th{background:var(--navy);color:#fff}
+.question-box{border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:12px;background:#fff}.radio-row label{display:inline-block;font-weight:400;margin-right:16px}.small-note{color:#666;font-size:.92rem}
+@media (max-width:900px){.grid,.grid-4{grid-template-columns:1fr}.navbar{flex-direction:column;align-items:flex-start}}
